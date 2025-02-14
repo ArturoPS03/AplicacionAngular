@@ -1,0 +1,14 @@
+.container {
+    color: #ffffff !important;
+  }
+  
+  .container p,
+  .container a,
+  .container li,
+  .container span {
+    color: #ffffff !important; 
+  }
+  
+  .container a:hover {
+    color: #cccccc !important;
+  }
