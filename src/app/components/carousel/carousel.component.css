@@ -13,3 +13,41 @@
     height: 500px;
     object-fit: cover;
   }
+  .carousel-caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-caption p {
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .btn-lg {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    background-color: #007bff;
+    border: none;
+    box-shadow: none !important;
+  }
+  
+  .btn-lg:hover, 
+  .btn-lg:focus, 
+  .btn-lg:active {
+    background-color: #0056b3;
+    box-shadow: none !important;
+    outline: none;
+  }

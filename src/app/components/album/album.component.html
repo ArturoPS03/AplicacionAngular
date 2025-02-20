@@ -2,18 +2,24 @@
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let monster of monsters">
+        <!--Una carta para cada monstruo-->
         <div class="card shadow-sm">
           <div class="card-body">
             <h5 class="card-title">{{ monster.name }}</h5>
-            <p class="card-text">{{ monster.description }}</p>
             <p><strong>Especie:</strong> {{ monster.species }}</p>
-            <p><strong>Tipo:</strong> {{ monster.type || 'Desconocido' }}</p> <!-- En caso de que no haya tipo, muestra 'Desconocido' -->
+            <p><strong>Tipo:</strong> {{ monster.type || 'Desconocido' }}</p>
+            <p class="card-text"><strong>Descripción:</strong> {{ monster.description }}</p>
             <div class="d-flex justify-content-between align-items-center">
               <small class="text-body-secondary">ID: {{ monster.id }}</small>
             </div>
           </div>
         </div>
       </div>
+    </div>
+     <!-- Botones de navegación -->
+     <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-primary" (click)="goToPrevious()" [disabled]="currentPage === 1">Anterior</button>
+      <button class="btn btn-primary" (click)="goToNext()">Siguiente</button>
     </div>
   </div>
 </div>
