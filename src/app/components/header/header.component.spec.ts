@@ -1,30 +1,30 @@
 /**
- * Pruebas unitarias para el componente `HeroComponent`.
+ * Pruebas unitarias para el componente `HeaderComponent`.
  */
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeroComponent } from './hero.component';
+import { HeaderComponent } from './header.component';
 
-describe('HeroComponent', () => {
+describe('HeaderComponent', () => {
   /**
-   * Instancia del componente `HeroComponent`.
+   * Instancia del componente `HeaderComponent`.
    */
-  let component: HeroComponent;
+  let component: HeaderComponent;
   
   /**
    * Instancia de `ComponentFixture` para gestionar la prueba del componente.
    */
-  let fixture: ComponentFixture<HeroComponent>;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   /**
    * Configuración inicial antes de ejecutar cada prueba.
    */
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroComponent]
+      imports: [HeaderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeroComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

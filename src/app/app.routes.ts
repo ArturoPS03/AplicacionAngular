@@ -1,3 +1,15 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
+import { MonstersComponent } from './components/pages/monsters/monsters.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+ // Ruta por defecto
+ { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+ // Ruta página de inicio
+ { path: 'home', component: HomeComponent },
+
+ // Ruta para la página "Monstruos"
+ { path: 'monsters', component: MonstersComponent },
+
+];
