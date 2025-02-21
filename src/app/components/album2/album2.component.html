@@ -1,0 +1,29 @@
+<div class="album py-5 bg-success">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let event of events">
+          <!-- Una tarjeta para cada evento -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ event.name }}</h5>
+              <p><strong>Plataforma:</strong> {{ event.platform }}</p>
+              <p><strong>Tipo:</strong> {{ event.type || 'Desconocido' }}</p>
+              <p><strong>Descripción:</strong> {{ event.description }}</p>
+              <p><strong>Requisitos:</strong> {{ event.requirements }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">ID: {{ event.id }}</small>
+        
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Botones de navegación -->
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-primary" (click)="goToPrevious()" [disabled]="currentPage === 1">Anterior</button>
+        <button class="btn btn-primary" (click)="goToNext()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+  

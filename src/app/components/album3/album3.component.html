@@ -1,0 +1,78 @@
+<div class="album py-5 bg-success">
+  <div class="container">
+    <div class="buttons mb-4">
+      <button 
+        class="btn fw-bold"
+        [ngClass]="{'btn-primary': showWeapons, 'btn-secondary opacity-50': !showWeapons}" 
+        (click)="showWeaponPage()">
+        Mostrar Armas
+      </button>
+      <button 
+        class="btn fw-bold"
+        [ngClass]="{'btn-primary': !showWeapons, 'btn-secondary opacity-50': showWeapons}" 
+        (click)="showArmorPage()">
+        Mostrar Armaduras
+      </button>
+    </div>
+
+    <!-- Mostrar armas -->
+    <div *ngIf="showWeapons">
+      <h2 class="mb-4">Armas</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let weapon of weapons">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ weapon.name }}</h5>
+              <p><strong>Tipo:</strong> {{ capitalizeFirstLetter(weapon.type) }}</p>
+              <p><strong>Rareza:</strong> {{ weapon.rarity }}</p>
+              <p><strong>Daño:</strong> {{ weapon.attack?.display ?? weapon.attack?.raw ?? 'No disponible' }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">ID: {{ weapon.id }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de navegación para armas -->
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-primary" (click)="goToPreviousWeaponPage()" [disabled]="currentWeaponPage === 1">
+          Anterior
+        </button>
+        <button class="btn btn-primary" (click)="goToNextWeaponPage()">Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Mostrar armaduras -->
+    <div *ngIf="!showWeapons">
+      <h2 class="mb-4">Armaduras</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let armor of armors">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ armor.name }}</h5>
+              <p><strong>Tipo:</strong> {{ capitalizeFirstLetter(armor.type) }}</p>
+              <p><strong>Defensa:</strong> {{ armor.defense.base }} - {{ armor.defense.max }}</p>
+              <p><strong>Resistencias:</strong>
+                <span *ngFor="let res of armor.resistances | keyvalue; let isLast = last">
+                  {{ res.key }}:{{ res.value }}<span *ngIf="!isLast">, </span>
+                </span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">ID: {{ armor.id }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de navegación para armaduras -->
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-primary" (click)="goToPreviousArmorPage()" [disabled]="currentArmorPage === 1">
+          Anterior
+        </button>
+        <button class="btn btn-primary" (click)="goToNextArmorPage()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</div>

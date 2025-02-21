@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MonstersService } from '../../services/monstersServices/monsters.service';
+import { MonstersService } from '../../services/monstersService/monsters.service';
 import { Monster } from '../../interfaces/monters.model';
 
 /**
