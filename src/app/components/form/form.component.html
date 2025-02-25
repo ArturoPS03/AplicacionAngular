@@ -1,0 +1,64 @@
+<main class="d-flex justify-content-center align-items-center vh-100" style="background-image: url('Images/Image 4.svg'); background-size: cover; background-position: center;">
+    <div class="p-4 bg-success text-white rounded-3 shadow" style="max-width: 450px; width: 100%; background-color: rgba(15, 61, 32, 0.8);">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <!-- Logo -->
+        <div class="text-center">
+          <img class="mb-2" src="Images/Logo.svg" alt="Logo" width="202" height="207">
+        </div>
+        <!-- Título -->
+        <h1 class="h2 mb-3 text-center fw-bold">Formulario</h1>
+  
+        <!-- Campos -->
+        <div class="mb-2">
+          <label for="name" class="form-label fw-semibold">Su nombre</label>
+          <input type="text" class="form-control" id="name" formControlName="name">
+          <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="text-danger">
+            El nombre es obligatorio.
+          </div>
+        </div>
+        <div class="mb-2">
+          <label for="username" class="form-label fw-semibold">Nombre de usuario</label>
+          <input type="text" class="form-control" id="username" formControlName="username">
+          <div *ngIf="form.get('username')?.invalid && form.get('username')?.touched" class="text-danger">
+            El nombre de usuario es obligatorio.
+          </div>
+        </div>
+        <div class="mb-2">
+          <label for="email" class="form-label fw-semibold">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="text-danger">
+            Introduzca un correo electrónico válido.
+          </div>
+        </div>
+        <div class="mb-2">
+          <label for="password" class="form-label fw-semibold">Contraseña</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+          <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="text-danger">
+            La contraseña debe tener al menos 6 caracteres.
+            <div *ngIf="form.get('password')?.hasError('passwordStrength')">
+              La contraseña debe tener al menos un número y un carácter especial.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label fw-semibold">Confirmar contraseña</label>
+          <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
+          <div *ngIf="form.get('confirmPassword')?.invalid && form.get('confirmPassword')?.touched" class="text-danger">
+            Las contraseñas deben coincidir.
+          </div>
+          <!-- Error de contraseñas no coincidentes -->
+          <div *ngIf="form.hasError('mismatch') && form.get('confirmPassword')?.touched" class="text-danger">
+            Las contraseñas no coinciden.
+          </div>
+        </div>
+  
+        <!-- Botón -->
+        <button class="btn btn-primary w-100 py-2 fs-5 fw-bold" type="submit" [disabled]="form.invalid">Crear cuenta</button>
+      </form>
+  
+      <!-- Volver -->
+      <a href="/home" class="text-primary text-decoration-underline position-absolute bottom-0 start-0 mb-3 ms-3">Volver</a>
+    </div>
+  </main>
+  

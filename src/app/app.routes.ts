@@ -4,6 +4,7 @@ import { MonstersComponent } from './pages/monsters/monsters.component';
 import { EventsComponent } from './pages/events/events.component';
 import { FilmComponent } from './pages/film/film.component';
 import { EquipmentComponent } from './pages/equipment/equipment.component';
+import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
 export const routes: Routes = [
  // Ruta por defecto
@@ -23,4 +24,7 @@ export const routes: Routes = [
 
     // Ruta para la página "Equipamiento"
     { path: 'equipment', component: EquipmentComponent },
+
+        // Ruta para la página "Crear cuenta"
+        { path: 'createAccount', component: CreateAccountComponent },
 ];

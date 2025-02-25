@@ -1,0 +1,4 @@
+.dropdown-toggle::after {
+    border-top-color: white !important;
+}
+  
