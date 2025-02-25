@@ -89,7 +89,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  HeroComponent</li>
+  JumbotronComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -116,7 +116,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/hero/hero.component.ts</code>
+    <code>src/app/components/jumbotron/jumbotron.component.ts</code>
 </p>
 
 
@@ -142,7 +142,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-hero</code></td>
+                <td class="col-md-9"><code>app-jumbotron</code></td>
             </tr>
 
             <tr>
@@ -156,14 +156,14 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./hero.component.html</code></td>
+                <td class="col-md-9"><code>./jumbotron.component.html</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./hero.component.css</code></td>
+                <td class="col-md-9"><code>./jumbotron.component.css</code></td>
             </tr>
 
 
@@ -189,39 +189,42 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-hero&#x27;,
+  selector: &#x27;app-jumbotron&#x27;,
   standalone: true,
   imports: [],
-  templateUrl: &#x27;./hero.component.html&#x27;,
-  styleUrl: &#x27;./hero.component.css&#x27;
+  templateUrl: &#x27;./jumbotron.component.html&#x27;,
+  styleUrl: &#x27;./jumbotron.component.css&#x27;
 })
-export class HeroComponent {
+export class JumbotronComponent {
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;hero-content&quot;&gt;
-  &lt;div class&#x3D;&quot;container my-5&quot;&gt;
-    &lt;div class&#x3D;&quot;row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg&quot;&gt;
-      &lt;!-- Texto --&gt;
-      &lt;div class&#x3D;&quot;col-12 col-lg-7 p-3 p-lg-5 pt-lg-3&quot;&gt;
-        &lt;h1 class&#x3D;&quot;display-4 fw-bold lh-1 text-body-emphasis&quot;&gt;Equipate para ser capaz de todo&lt;/h1&gt;
-        &lt;p class&#x3D;&quot;lead&quot;&gt;Busca cualquier arma o armadura que necesites, esto te ayudará a ir bien preparado a cualquier misión del juego. Vence hasta al peor de los dragones gracias a nuestra página, donde podrás acceder rápido a toda la información que necesites para equiparte.&lt;/p&gt;
-        &lt;div class&#x3D;&quot;d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3&quot;&gt;
-          &lt;!-- Botones --&gt;
-          &lt;a href&#x3D;&quot;/equipment&quot; class&#x3D;&quot;btn btn-primary btn-lg&quot;&gt;Equipo&lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Imagen --&gt;
-      &lt;div class&#x3D;&quot;col-12 col-lg-5 p-0 overflow-hidden shadow-lg&quot; style&#x3D;&quot;max-height: 500px;&quot;&gt;
-        &lt;img class&#x3D;&quot;rounded-lg-3 w-100 h-100&quot; src&#x3D;&quot;Images/Hunter.svg&quot; alt&#x3D;&quot;Hunter&quot; style&#x3D;&quot;max-height: 500px; object-fit: cover; object-position: top;&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!--El grande--&gt;
+&lt;div class&#x3D;&quot;p-5 mb-4&quot; style&#x3D;&quot;background-color: #004200; color: white;&quot;&gt;
+    &lt;div class&#x3D;&quot;container-fluid py-5&quot;&gt;
+      &lt;p class&#x3D;&quot;col-md-8 fs-4&quot;&gt;Monster Hunter (titulada Monster Hunter: la cacería comienza en Hispanoamérica) es una película de monstruos de 2020 producida, escrita y dirigida por Paul W. S. Anderson, basada en la serie de videojuegos del mismo nombre de Capcom. La película está protagonizada por Milla Jovovich, Tony Jaa, Tip &quot;T. I.&quot; Harris, Meagan Good, Diego Boneta, Josh Helman, Jin Au-Yeung y Ron Perlman.
+        Monster Hunter fue estrenada en China el 4 de diciembre de 2020 y en los Estados Unidos el 18 de diciembre de 2020 por Sony Pictures Releasing a través del sello Screen Gems (excluyendo Alemania, Japón y China).&lt;/p&gt;
+      &lt;a href&#x3D;&quot;https://es.wikipedia.org/wiki/Monster_Hunter_(pel%C3%ADcula)&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;btn btn-light btn-lg&quot;&gt;Buscar más información&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;  
+   
+  &lt;!--Los dos pequeños--&gt;
+  &lt;div class&#x3D;&quot;row align-items-md-stretch&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+      &lt;div class&#x3D;&quot;h-100 p-5 text-bg-dark rounded-3&quot;&gt;
+        &lt;h2&gt;Estreno&lt;/h2&gt;
+        &lt;p&gt;Monster Hunter fue estrenada en Estados Unidos el 18 de diciembre de 2020. La película estaba originalmente programada para ser lanzada el 4 de septiembre de 2020, pero se retrasó hasta el 23 de abril de 2021, debido a la pandemia de COVID-19, antes de ser trasladada hasta el 30 de diciembre, y finalmente la fecha de Navidad. Sony modificó una vez más la fecha de lanzamiento de la película en los Estados Unidos a principios de diciembre después del problemático lanzamiento de la película en China, moviendo su lanzamiento al 18 de diciembre de 2020.&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+      &lt;div class&#x3D;&quot;h-100  bg-body-tertiary border &quot;&gt;
+        &lt;img src&#x3D;&quot;Images/Image 3.svg&quot; class&#x3D;&quot;d-block w-100&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
     </div>
 
 
@@ -250,10 +253,10 @@ export class HeroComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="hero-content">  <div class="container my-5">    <div class="row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg">      <!-- Texto -->      <div class="col-12 col-lg-7 p-3 p-lg-5 pt-lg-3">        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Equipate para ser capaz de todo</h1>        <p class="lead">Busca cualquier arma o armadura que necesites, esto te ayudará a ir bien preparado a cualquier misión del juego. Vence hasta al peor de los dragones gracias a nuestra página, donde podrás acceder rápido a toda la información que necesites para equiparte.</p>        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">          <!-- Botones -->          <a href="/equipment" class="btn btn-primary btn-lg">Equipo</a>        </div>      </div>      <!-- Imagen -->      <div class="col-12 col-lg-5 p-0 overflow-hidden shadow-lg" style="max-height: 500px;">        <img class="rounded-lg-3 w-100 h-100" src="Images/Hunter.svg" alt="Hunter" style="max-height: 500px; object-fit: cover; object-position: top;">      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><!--El grande--><div class="p-5 mb-4" style="background-color: #004200; color: white;">    <div class="container-fluid py-5">      <p class="col-md-8 fs-4">Monster Hunter (titulada Monster Hunter: la cacería comienza en Hispanoamérica) es una película de monstruos de 2020 producida, escrita y dirigida por Paul W. S. Anderson, basada en la serie de videojuegos del mismo nombre de Capcom. La película está protagonizada por Milla Jovovich, Tony Jaa, Tip "T. I." Harris, Meagan Good, Diego Boneta, Josh Helman, Jin Au-Yeung y Ron Perlman.        Monster Hunter fue estrenada en China el 4 de diciembre de 2020 y en los Estados Unidos el 18 de diciembre de 2020 por Sony Pictures Releasing a través del sello Screen Gems (excluyendo Alemania, Japón y China).</p>      <a href="https://es.wikipedia.org/wiki/Monster_Hunter_(pel%C3%ADcula)" target="_blank" class="btn btn-light btn-lg">Buscar más información</a>    </div>  </div>       <!--Los dos pequeños-->  <div class="row align-items-md-stretch">    <div class="col-md-6">      <div class="h-100 p-5 text-bg-dark rounded-3">        <h2>Estreno</h2>        <p>Monster Hunter fue estrenada en Estados Unidos el 18 de diciembre de 2020. La película estaba originalmente programada para ser lanzada el 4 de septiembre de 2020, pero se retrasó hasta el 23 de abril de 2021, debido a la pandemia de COVID-19, antes de ser trasladada hasta el 30 de diciembre, y finalmente la fecha de Navidad. Sony modificó una vez más la fecha de lanzamiento de la película en los Estados Unidos a principios de diciembre después del problemático lanzamiento de la película en China, moviendo su lanzamiento al 18 de diciembre de 2020.</p>      </div>    </div>    <div class="col-md-6">      <div class="h-100  bg-body-tertiary border ">        <img src="Images/Image 3.svg" class="d-block w-100">      </div>    </div>  </div></div>'
     var COMPONENTS = [{'name': 'Album2Component', 'selector': 'app-album2'},{'name': 'Album3Component', 'selector': 'app-album3'},{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EquipmentComponent', 'selector': 'app-equipment'},{'name': 'EventsComponent', 'selector': 'app-events'},{'name': 'FilmComponent', 'selector': 'app-film'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JumbotronComponent', 'selector': 'app-jumbotron'},{'name': 'MonstersComponent', 'selector': 'app-monsters'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'HeroComponent'};
+    var ACTUAL_COMPONENT = {'name': 'JumbotronComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -299,7 +302,7 @@ export class HeroComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeroComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'JumbotronComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

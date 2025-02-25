@@ -89,7 +89,7 @@
   <li class="breadcrumb-item">Components</li>
   <li class="breadcrumb-item"
   >
-  HeroComponent</li>
+  EventsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -116,7 +116,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/hero/hero.component.ts</code>
+    <code>src/app/pages/events/events.component.ts</code>
 </p>
 
 
@@ -142,7 +142,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-hero</code></td>
+                <td class="col-md-9"><code>app-events</code></td>
             </tr>
 
             <tr>
@@ -150,20 +150,28 @@
                 <td class="col-md-9"><code>true</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                                <code><a href="../components/HeaderComponent.html" target="_self" >HeaderComponent</a></code>
+                                <code><a href="../components/Album2Component.html" target="_self" >Album2Component</a></code>
+                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
+                </td>
+            </tr>
 
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./hero.component.html</code></td>
+                <td class="col-md-9"><code>./events.component.html</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">styleUrl</td>
-                <td class="col-md-9"><code>./hero.component.css</code></td>
+                <td class="col-md-9"><code>./events.component.css</code></td>
             </tr>
 
 
@@ -187,41 +195,28 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { HeaderComponent } from &#x27;../../components/header/header.component&#x27;;
+import { Album2Component } from &quot;../../components/album2/album2.component&quot;;
+import { FooterComponent } from &quot;../../components/footer/footer.component&quot;;
 
 @Component({
-  selector: &#x27;app-hero&#x27;,
+  selector: &#x27;app-events&#x27;,
   standalone: true,
-  imports: [],
-  templateUrl: &#x27;./hero.component.html&#x27;,
-  styleUrl: &#x27;./hero.component.css&#x27;
+  imports: [HeaderComponent, Album2Component, FooterComponent],
+  templateUrl: &#x27;./events.component.html&#x27;,
+  styleUrl: &#x27;./events.component.css&#x27;
 })
-export class HeroComponent {
+export class EventsComponent {
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;hero-content&quot;&gt;
-  &lt;div class&#x3D;&quot;container my-5&quot;&gt;
-    &lt;div class&#x3D;&quot;row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg&quot;&gt;
-      &lt;!-- Texto --&gt;
-      &lt;div class&#x3D;&quot;col-12 col-lg-7 p-3 p-lg-5 pt-lg-3&quot;&gt;
-        &lt;h1 class&#x3D;&quot;display-4 fw-bold lh-1 text-body-emphasis&quot;&gt;Equipate para ser capaz de todo&lt;/h1&gt;
-        &lt;p class&#x3D;&quot;lead&quot;&gt;Busca cualquier arma o armadura que necesites, esto te ayudará a ir bien preparado a cualquier misión del juego. Vence hasta al peor de los dragones gracias a nuestra página, donde podrás acceder rápido a toda la información que necesites para equiparte.&lt;/p&gt;
-        &lt;div class&#x3D;&quot;d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3&quot;&gt;
-          &lt;!-- Botones --&gt;
-          &lt;a href&#x3D;&quot;/equipment&quot; class&#x3D;&quot;btn btn-primary btn-lg&quot;&gt;Equipo&lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;!-- Imagen --&gt;
-      &lt;div class&#x3D;&quot;col-12 col-lg-5 p-0 overflow-hidden shadow-lg&quot; style&#x3D;&quot;max-height: 500px;&quot;&gt;
-        &lt;img class&#x3D;&quot;rounded-lg-3 w-100 h-100&quot; src&#x3D;&quot;Images/Hunter.svg&quot; alt&#x3D;&quot;Hunter&quot; style&#x3D;&quot;max-height: 500px; object-fit: cover; object-position: top;&quot;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;app-header&gt;&lt;/app-header&gt;
+&lt;app-album2&gt;&lt;/app-album2&gt;
+&lt;app-footer&gt;&lt;/app-footer&gt;
+</code></pre>
     </div>
 
 
@@ -250,10 +245,10 @@ export class HeroComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="hero-content">  <div class="container my-5">    <div class="row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg">      <!-- Texto -->      <div class="col-12 col-lg-7 p-3 p-lg-5 pt-lg-3">        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Equipate para ser capaz de todo</h1>        <p class="lead">Busca cualquier arma o armadura que necesites, esto te ayudará a ir bien preparado a cualquier misión del juego. Vence hasta al peor de los dragones gracias a nuestra página, donde podrás acceder rápido a toda la información que necesites para equiparte.</p>        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">          <!-- Botones -->          <a href="/equipment" class="btn btn-primary btn-lg">Equipo</a>        </div>      </div>      <!-- Imagen -->      <div class="col-12 col-lg-5 p-0 overflow-hidden shadow-lg" style="max-height: 500px;">        <img class="rounded-lg-3 w-100 h-100" src="Images/Hunter.svg" alt="Hunter" style="max-height: 500px; object-fit: cover; object-position: top;">      </div>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-header></app-header><app-album2></app-album2><app-footer></app-footer></div>'
     var COMPONENTS = [{'name': 'Album2Component', 'selector': 'app-album2'},{'name': 'Album3Component', 'selector': 'app-album3'},{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EquipmentComponent', 'selector': 'app-equipment'},{'name': 'EventsComponent', 'selector': 'app-events'},{'name': 'FilmComponent', 'selector': 'app-film'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JumbotronComponent', 'selector': 'app-jumbotron'},{'name': 'MonstersComponent', 'selector': 'app-monsters'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'HeroComponent'};
+    var ACTUAL_COMPONENT = {'name': 'EventsComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -299,7 +294,7 @@ export class HeroComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeroComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'EventsComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

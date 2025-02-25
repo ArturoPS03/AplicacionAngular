@@ -154,10 +154,6 @@
                 <td class="col-md-3">imports</td>
                 <td class="col-md-9">
                             <code>RouterOutlet</code>
-                                <code><a href="../components/HeaderComponent.html" target="_self" >HeaderComponent</a></code>
-                                <code><a href="../components/CarouselComponent.html" target="_self" >CarouselComponent</a></code>
-                                <code><a href="../components/HeroComponent.html" target="_self" >HeroComponent</a></code>
-                                <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
                 </td>
             </tr>
 
@@ -247,7 +243,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/app.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
                         </td>
                     </tr>
 
@@ -262,15 +258,11 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { RouterOutlet } from &#x27;@angular/router&#x27;;
-import { HeaderComponent } from &#x27;./components/header/header.component&#x27;;
-import { CarouselComponent } from &quot;./components/carousel/carousel.component&quot;;
-import { HeroComponent } from &quot;./components/hero/hero.component&quot;;
-import { FooterComponent } from &quot;./components/footer/footer.component&quot;;
 
 @Component({
   selector: &#x27;app-root&#x27;,
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CarouselComponent, HeroComponent, FooterComponent],
+  imports: [RouterOutlet],
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrl: &#x27;./app.component.css&#x27;
 })
@@ -281,10 +273,7 @@ export class AppComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-header&gt;&lt;/app-header&gt;
-&lt;app-carousel&gt;&lt;/app-carousel&gt;
-&lt;app-hero&gt;&lt;/app-hero&gt;
-&lt;app-footer&gt;&lt;/app-footer&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre>
     </div>
 
 
@@ -313,8 +302,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-header></app-header><app-carousel></app-carousel><app-hero></app-hero><app-footer></app-footer></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'}];
+        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
+    var COMPONENTS = [{'name': 'Album2Component', 'selector': 'app-album2'},{'name': 'Album3Component', 'selector': 'app-album3'},{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EquipmentComponent', 'selector': 'app-equipment'},{'name': 'EventsComponent', 'selector': 'app-events'},{'name': 'FilmComponent', 'selector': 'app-film'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JumbotronComponent', 'selector': 'app-jumbotron'},{'name': 'MonstersComponent', 'selector': 'app-monsters'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>
