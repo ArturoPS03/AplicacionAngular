@@ -12,3 +12,18 @@
   .container a:hover {
     color: #cccccc !important;
   }
+  
+/* Dispositivos móviles */
+  @media (max-width: 767px) {
+    footer {
+      margin-top: 50px;
+    }
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  body {
+    padding-top: 20px;
+  }

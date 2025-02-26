@@ -202,9 +202,14 @@ export class FooterComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container py-4&quot;&gt;
+  &lt;!-- contenido superior --&gt;
+  &lt;div class&#x3D;&quot;content-above-footer&quot;&gt;
+    &lt;!-- Aquí va el contenido que está encima del footer --&gt;
+  &lt;/div&gt;
+
   &lt;!-- footer --&gt;
-  &lt;footer class&#x3D;&quot;d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top&quot;&gt;
+  &lt;footer class&#x3D;&quot;d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-5&quot;&gt;
     &lt;p class&#x3D;&quot;col-12 col-md-4 mb-0 text-body-secondary text-center text-md-start&quot;&gt;© 2025 Company, Inc&lt;/p&gt;
 
     &lt;a href&#x3D;&quot;/&quot; class&#x3D;&quot;col-12 col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none&quot;&gt;
@@ -249,7 +254,7 @@ export class FooterComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">  <!-- footer -->  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">    <p class="col-12 col-md-4 mb-0 text-body-secondary text-center text-md-start">© 2025 Company, Inc</p>    <a href="/" class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>    </a>    <!-- Botones de navegación -->    <ul class="nav col-12 col-md-4 justify-content-center justify-content-md-end">      <li class="nav-item"><a href="/home" class="nav-link px-2 text-body-secondary">Inicio</a></li>      <li class="nav-item"><a href="/monsters" class="nav-link px-2 text-body-secondary">Monstruos</a></li>      <li class="nav-item"><a href="/events" class="nav-link px-2 text-body-secondary">Misiones</a></li>      <li class="nav-item"><a href="/film" class="nav-link px-2 text-body-secondary">Pelicula</a></li>      <li class="nav-item"><a href="/equipment" class="nav-link px-2 text-body-secondary">Equipamiento</a></li>    </ul>  </footer></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container py-4">  <!-- contenido superior -->  <div class="content-above-footer">    <!-- Aquí va el contenido que está encima del footer -->  </div>  <!-- footer -->  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-5">    <p class="col-12 col-md-4 mb-0 text-body-secondary text-center text-md-start">© 2025 Company, Inc</p>    <a href="/" class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>    </a>    <!-- Botones de navegación -->    <ul class="nav col-12 col-md-4 justify-content-center justify-content-md-end">      <li class="nav-item"><a href="/home" class="nav-link px-2 text-body-secondary">Inicio</a></li>      <li class="nav-item"><a href="/monsters" class="nav-link px-2 text-body-secondary">Monstruos</a></li>      <li class="nav-item"><a href="/events" class="nav-link px-2 text-body-secondary">Misiones</a></li>      <li class="nav-item"><a href="/film" class="nav-link px-2 text-body-secondary">Pelicula</a></li>      <li class="nav-item"><a href="/equipment" class="nav-link px-2 text-body-secondary">Equipamiento</a></li>    </ul>  </footer></div></div>'
     var COMPONENTS = [{'name': 'Album2Component', 'selector': 'app-album2'},{'name': 'Album3Component', 'selector': 'app-album3'},{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EquipmentComponent', 'selector': 'app-equipment'},{'name': 'EventsComponent', 'selector': 'app-events'},{'name': 'FilmComponent', 'selector': 'app-film'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JumbotronComponent', 'selector': 'app-jumbotron'},{'name': 'MonstersComponent', 'selector': 'app-monsters'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FooterComponent'};

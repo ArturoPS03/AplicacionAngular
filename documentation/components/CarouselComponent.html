@@ -202,19 +202,20 @@ export class CarouselComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div id&#x3D;&quot;myCarousel&quot; class&#x3D;&quot;carousel slide mb-6&quot; data-bs-ride&#x3D;&quot;carousel&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Carousel --&gt;
+&lt;div id&#x3D;&quot;myCarousel&quot; class&#x3D;&quot;carousel slide mb-6&quot; data-bs-ride&#x3D;&quot;carousel&quot; style&#x3D;&quot;z-index: 1;&quot;&gt;
   &lt;!-- Botones abajo Carousel --&gt;
   &lt;div class&#x3D;&quot;carousel-indicators&quot;&gt;
-    &lt;button type&#x3D;&quot;button&quot; data-bs-target&#x3D;&quot;#myCarousel&quot; data-bs-slide-to&#x3D;&quot;0&quot; class&#x3D;&quot;&quot; aria-label&#x3D;&quot;Slide 1&quot;&gt;&lt;/button&gt;
+    &lt;button type&#x3D;&quot;button&quot; data-bs-target&#x3D;&quot;#myCarousel&quot; data-bs-slide-to&#x3D;&quot;0&quot; aria-label&#x3D;&quot;Slide 1&quot;&gt;&lt;/button&gt;
     &lt;button type&#x3D;&quot;button&quot; data-bs-target&#x3D;&quot;#myCarousel&quot; data-bs-slide-to&#x3D;&quot;1&quot; aria-label&#x3D;&quot;Slide 2&quot; class&#x3D;&quot;active&quot; aria-current&#x3D;&quot;true&quot;&gt;&lt;/button&gt;
-    &lt;button type&#x3D;&quot;button&quot; data-bs-target&#x3D;&quot;#myCarousel&quot; data-bs-slide-to&#x3D;&quot;2&quot; aria-label&#x3D;&quot;Slide 3&quot; class&#x3D;&quot;&quot;&gt;&lt;/button&gt;
+    &lt;button type&#x3D;&quot;button&quot; data-bs-target&#x3D;&quot;#myCarousel&quot; data-bs-slide-to&#x3D;&quot;2&quot; aria-label&#x3D;&quot;Slide 3&quot;&gt;&lt;/button&gt;
   &lt;/div&gt;
 
   &lt;!-- Vistas del Carousel --&gt;
   &lt;div class&#x3D;&quot;carousel-inner&quot;&gt;
     &lt;!-- Primera vista --&gt;
     &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-      &lt;img src&#x3D;&quot;Images/Image 1.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;First slide&quot;&gt;
+      &lt;img src&#x3D;&quot;Images/Image 1.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;First slide&quot; style&#x3D;&quot;object-fit: cover; object-position: center;&quot;&gt;
       &lt;div class&#x3D;&quot;container&quot;&gt;
         &lt;div class&#x3D;&quot;carousel-caption text-start&quot;&gt;
           &lt;p&gt;Metete en nuestra enciclopedia y lee todo sobre los monstruos.&lt;/p&gt;
@@ -225,7 +226,7 @@ export class CarouselComponent {
 
     &lt;!-- Segunda vista --&gt;
     &lt;div class&#x3D;&quot;carousel-item active&quot;&gt;
-      &lt;img src&#x3D;&quot;Images/Image 2.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;Second slide&quot;&gt;
+      &lt;img src&#x3D;&quot;Images/Image 2.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;Second slide&quot; style&#x3D;&quot;object-fit: cover; object-position: center;&quot;&gt;
       &lt;div class&#x3D;&quot;container&quot;&gt;
         &lt;div class&#x3D;&quot;carousel-caption&quot;&gt;
           &lt;p&gt;¿Quieres cazar algún monstruo grande y poderoso? Infórmate primero de las misiones que hay y busca tu favorita.&lt;/p&gt;
@@ -236,7 +237,7 @@ export class CarouselComponent {
 
     &lt;!-- Tercera vista --&gt;
     &lt;div class&#x3D;&quot;carousel-item&quot;&gt;
-      &lt;img src&#x3D;&quot;Images/Image 3.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;Third slide&quot;&gt;
+      &lt;img src&#x3D;&quot;Images/Image 3.svg&quot; class&#x3D;&quot;d-block w-100&quot; alt&#x3D;&quot;Third slide&quot; style&#x3D;&quot;object-fit: cover; object-position: center;&quot;&gt;
       &lt;div class&#x3D;&quot;container&quot;&gt;
         &lt;div class&#x3D;&quot;carousel-caption text-end&quot;&gt;
           &lt;p&gt;Monster hunter también tiene su propia película. ¿Quieres informarte?&lt;/p&gt;
@@ -284,7 +285,7 @@ export class CarouselComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">  <!-- Botones abajo Carousel -->  <div class="carousel-indicators">    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>  </div>  <!-- Vistas del Carousel -->  <div class="carousel-inner">    <!-- Primera vista -->    <div class="carousel-item">      <img src="Images/Image 1.svg" class="d-block w-100" alt="First slide">      <div class="container">        <div class="carousel-caption text-start">          <p>Metete en nuestra enciclopedia y lee todo sobre los monstruos.</p>          <p><a class="btn btn-lg btn-primary" href="/monsters">Monstruos</a></p>        </div>      </div>    </div>    <!-- Segunda vista -->    <div class="carousel-item active">      <img src="Images/Image 2.svg" class="d-block w-100" alt="Second slide">      <div class="container">        <div class="carousel-caption">          <p>¿Quieres cazar algún monstruo grande y poderoso? Infórmate primero de las misiones que hay y busca tu favorita.</p>          <p><a class="btn btn-lg btn-primary" href="/events">Misiones</a></p>        </div>      </div>    </div>    <!-- Tercera vista -->    <div class="carousel-item">      <img src="Images/Image 3.svg" class="d-block w-100" alt="Third slide">      <div class="container">        <div class="carousel-caption text-end">          <p>Monster hunter también tiene su propia película. ¿Quieres informarte?</p>          <p><a class="btn btn-lg btn-primary" href="/film">Noticia</a></p>        </div>      </div>    </div>  </div>  <!-- Botones laterales Carousel -->  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">    <span class="carousel-control-prev-icon" aria-hidden="true"></span>    <span class="visually-hidden">Previous</span>  </button>  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">    <span class="carousel-control-next-icon" aria-hidden="true"></span>    <span class="visually-hidden">Next</span>  </button></div></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Carousel --><div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="z-index: 1;">  <!-- Botones abajo Carousel -->  <div class="carousel-indicators">    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>  </div>  <!-- Vistas del Carousel -->  <div class="carousel-inner">    <!-- Primera vista -->    <div class="carousel-item">      <img src="Images/Image 1.svg" class="d-block w-100" alt="First slide" style="object-fit: cover; object-position: center;">      <div class="container">        <div class="carousel-caption text-start">          <p>Metete en nuestra enciclopedia y lee todo sobre los monstruos.</p>          <p><a class="btn btn-lg btn-primary" href="/monsters">Monstruos</a></p>        </div>      </div>    </div>    <!-- Segunda vista -->    <div class="carousel-item active">      <img src="Images/Image 2.svg" class="d-block w-100" alt="Second slide" style="object-fit: cover; object-position: center;">      <div class="container">        <div class="carousel-caption">          <p>¿Quieres cazar algún monstruo grande y poderoso? Infórmate primero de las misiones que hay y busca tu favorita.</p>          <p><a class="btn btn-lg btn-primary" href="/events">Misiones</a></p>        </div>      </div>    </div>    <!-- Tercera vista -->    <div class="carousel-item">      <img src="Images/Image 3.svg" class="d-block w-100" alt="Third slide" style="object-fit: cover; object-position: center;">      <div class="container">        <div class="carousel-caption text-end">          <p>Monster hunter también tiene su propia película. ¿Quieres informarte?</p>          <p><a class="btn btn-lg btn-primary" href="/film">Noticia</a></p>        </div>      </div>    </div>  </div>  <!-- Botones laterales Carousel -->  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">    <span class="carousel-control-prev-icon" aria-hidden="true"></span>    <span class="visually-hidden">Previous</span>  </button>  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">    <span class="carousel-control-next-icon" aria-hidden="true"></span>    <span class="visually-hidden">Next</span>  </button></div></div>'
     var COMPONENTS = [{'name': 'Album2Component', 'selector': 'app-album2'},{'name': 'Album3Component', 'selector': 'app-album3'},{'name': 'AlbumComponent', 'selector': 'app-album'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EquipmentComponent', 'selector': 'app-equipment'},{'name': 'EventsComponent', 'selector': 'app-events'},{'name': 'FilmComponent', 'selector': 'app-film'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeroComponent', 'selector': 'app-hero'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'JumbotronComponent', 'selector': 'app-jumbotron'},{'name': 'MonstersComponent', 'selector': 'app-monsters'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CarouselComponent'};
